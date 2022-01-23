@@ -22,33 +22,18 @@
   margin-top: 6rem /* 96px */;
 }
 
-.nseriesWrapper {
-  display: flex;
-}
-
-.firstLetter {
-  font-size: 3.75rem /* 60px */;
-  line-height: 1;
-  color: var(--red);
-  font-weight: 800;
-}
-
-.series {
-  font-size: 0.875rem /* 14px */;
-  line-height: 1.25rem /* 20px */;
-  color: var(--gray20);
-  align-self: center;
-}
-
 .title {
+  margin-left: -5%;
   font-size: 1.5rem /* 24px */;
   line-height: 2rem /* 32px */;
   font-weight: 800;
   color: var(--white10);
-  -webkit-text-stroke: 2px var(--black); /* width and color */
+  margin-top: 10%;
+  -webkit-text-stroke: 2px #3d3d3d; /* width and color */
 }
 
 .subTitle {
+  margin-left: -5%;
   font-size: 1.125rem /* 18px */;
   line-height: 1.75rem /* 28px */;
   color: var(--white10);
@@ -56,13 +41,14 @@
 }
 
 .playBtnWrapper {
+  margin-left: -5%;
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
 .playText {
-  color: rgb(31, 41, 55);
+  color: #fff;
   font-weight: 600;
   font-size: 1.125rem /* 18px */;
   line-height: 1.75rem /* 28px */;
@@ -82,7 +68,7 @@
   --tw-gradient-from: var(--black);
 
   background-size: cover;
-  background-position: "50% 50%";
+  background-position: '50% 50%';
 }
 
 .btnWithIcon {
@@ -97,8 +83,9 @@
   padding-top: 0.5rem /* 8px */;
   padding-bottom: 0.5rem /* 8px */;
 
-  background-color: var(--white10);
+  background-color: #3d3d3d;
   width: 8rem /* 128px */;
+  border: 1px solid black;
 }
 
 @media (min-width: 768px) {

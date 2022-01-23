@@ -66,10 +66,10 @@ const NavBar = () => {
         <a className={styles.logoLink} href="/">
           <div className={styles.logoWrapper}>
             <Image
-              src="/static/netflix.svg"
-              alt="Netflix logo"
-              width="128px"
-              height="34px"
+              src="/static/strokesflix.png"
+              alt="StrokesFlix logo"
+              width="150px"
+              height="110px"
             />
           </div>
         </a>

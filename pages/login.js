@@ -76,7 +76,7 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Netflix SignIn</title>
+        <title>StrokesFlix SignIn</title>
       </Head>
 
       <header className={styles.header}>
@@ -84,10 +84,10 @@ const Login = () => {
           <a className={styles.logoLink} href="/">
             <div className={styles.logoWrapper}>
               <Image
-                src="/static/netflix.svg"
-                alt="Netflix logo"
-                width="128px"
-                height="34px"
+                src="/static/strokesflix.png"
+                alt="StrokesFlix logo"
+                width="150px"
+                height="110px"
               />
             </div>
           </a>

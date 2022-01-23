@@ -8,7 +8,6 @@ import SectionCards from "../components/card/section-cards";
 
 import {
   getVideos,
-  getPopularVideos,
   getWatchItAgainVideos,
 } from "../lib/videos";
 import useRedirectUser from "../utils/redirectUser";
@@ -25,61 +24,59 @@ export async function getServerSideProps(context) {
     };
   }
   const watchItAgainVideos = await getWatchItAgainVideos(userId, token);
+  const officialMusicVideos = await getVideos("the strokes official music video");
+  const livePerformances = await getVideos("the strokes band live");
+  const coverSongs = await getVideos("the strokes cover song");
+  const interviews = await getVideos("the strokes band interview");
+  const tutorials = await getVideos("the strokes tutorial");
 
-  const disneyVideos = await getVideos("disney trailer");
-  const productivityVideos = await getVideos("Productivity");
-
-  const travelVideos = await getVideos("indie music");
-
-  const popularVideos = await getPopularVideos();
   return {
     props: {
-      disneyVideos,
-      travelVideos,
-      productivityVideos,
-      popularVideos,
+      officialMusicVideos,
+      livePerformances,
       watchItAgainVideos,
+      coverSongs,
+      interviews,
+      tutorials
     },
   };
 }
 
 export default function Home({
-  disneyVideos,
-  travelVideos,
-  productivityVideos,
-  popularVideos,
+  officialMusicVideos,
+  livePerformances,
   watchItAgainVideos,
+  coverSongs,
+  interviews,
+  tutorials
 }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Netflix</title>
+        <title>StrokesFlix</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className={styles.main}>
-        <NavBar username="ankita@ank.com" />
+        <NavBar username="" />
         <Banner
-          videoId="4zH5iYM4wJo"
-          title="Clifford the red dog"
-          subTitle="a very cute dog"
-          imgUrl="/static/clifford.webp"
+          videoId="zHnjtT94deI"
+          title="In Transit"
+          subTitle="a strokes movie"
+          imgUrl="/static/strokes-band.webp"
         />
 
         <div className={styles.sectionWrapper}>
-          <SectionCards title="Disney" videos={disneyVideos} size="large" />
+          <SectionCards title="Strokes Official Music Videos" videos={officialMusicVideos} size="large" />
+          <SectionCards title="Live Performances" videos={livePerformances} size="small" />
+          <SectionCards title="Cover Songs" videos={coverSongs} size="small" />
+          <SectionCards title="Interviews" videos={interviews} size="small" />
+          <SectionCards title="Tutorials" videos={tutorials} size="small" />
           <SectionCards
             title="Watch it again"
             videos={watchItAgainVideos}
             size="small"
           />
-          <SectionCards title="Travel" videos={travelVideos} size="small" />
-          <SectionCards
-            title="Productivity"
-            videos={productivityVideos}
-            size="medium"
-          />
-          <SectionCards title="Popular" videos={popularVideos} size="small" />
         </div>
       </div>
     </div>
