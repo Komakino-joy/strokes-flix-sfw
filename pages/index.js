@@ -67,7 +67,7 @@ export default function Home({
         />
 
         <div className={styles.sectionWrapper}>
-          <SectionCards title="Strokes Official Music Videos" videos={officialMusicVideos} size="large" />
+          <SectionCards title="Official Music Videos" videos={officialMusicVideos} size="large" />
           <SectionCards title="Live Performances" videos={livePerformances} size="small" />
           <SectionCards title="Cover Songs" videos={coverSongs} size="small" />
           <SectionCards title="Interviews" videos={interviews} size="small" />
