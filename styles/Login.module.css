@@ -1,7 +1,6 @@
 .container {
   min-height: 100vh;
   background-color: var(--black);
-
   background-image: url(/static/fioe.svg);
 }
 
@@ -35,30 +34,32 @@
 }
 
 .main {
-  width: 100%;
+  width: 82vw;
   height: 80vh;
   position: absolute;
-
   display: flex;
   top: 20%;
-  left: 10%;
+  left: 18%;
   z-index: 10;
 }
 
 .mainWrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   padding-bottom: 6rem;
   padding-top: 2rem /* 32px */;
   background-color: var(--black20);
 
   height: 38%;
-  padding-left: 3rem /* 48px */;
-  padding-right: 3rem /* 48px */;
+  padding-left: 5rem /* 48px */;
+  padding-right: 5rem /* 48px */;
 
   border-radius: 0.375rem /* 6px */;
-  min-width: 240px;
+  width: 30vw;
+  min-width: 350px;
+  min-height: 280px;
   background-color: rgba(53, 53, 53, 0.945);
 }
 
