@@ -27,18 +27,18 @@ export async function getServerSideProps(context) {
   const watchItAgainVideos = await getWatchItAgainVideos(userId, token);
   const officialMusicVideos = await getVideos("the strokes official music video");
   const livePerformances = await getVideos("the strokes band live");
-  const coverSongs = await getVideos("the strokes cover song");
   const interviews = await getVideos("the strokes band interview");
-  const tutorials = await getVideos("the strokes tutorial");
+  // const coverSongs = await getVideos("the strokes cover song");
+  // const tutorials = await getVideos("the strokes tutorial");
 
   return {
     props: {
       officialMusicVideos,
       livePerformances,
       watchItAgainVideos,
-      coverSongs,
       interviews,
-      tutorials
+      // coverSongs,
+      // tutorials
     },
   };
 }
@@ -47,9 +47,9 @@ export default function Home({
   officialMusicVideos,
   livePerformances,
   watchItAgainVideos,
-  coverSongs,
   interviews,
-  tutorials
+  // coverSongs,
+  // tutorials
 }) {
   return (
     <div className={styles.container}>
@@ -69,9 +69,9 @@ export default function Home({
         <div className={styles.sectionWrapper}>
           <SectionCards title="Official Music Videos" videos={officialMusicVideos} size="large" />
           <SectionCards title="Live Performances" videos={livePerformances} size="small" />
-          <SectionCards title="Cover Songs" videos={coverSongs} size="small" />
           <SectionCards title="Interviews" videos={interviews} size="small" />
-          <SectionCards title="Tutorials" videos={tutorials} size="small" />
+          {/* <SectionCards title="Cover Songs" videos={coverSongs} size="small" />
+          <SectionCards title="Tutorials" videos={tutorials} size="small" /> */}
           <SectionCards
             title="Watch it again"
             videos={watchItAgainVideos}
