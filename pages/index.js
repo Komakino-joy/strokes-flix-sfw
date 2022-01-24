@@ -66,9 +66,6 @@ export default function Home({
         />
 
         <div className={styles.sectionWrapper}>
-          <button onClick={() => console.log( officialMusicVideos )} >Log Official</button>
-          <button onClick={() => console.log( livePerformances )} >Log livePerformances</button>
-          <button onClick={() => console.log( coverSongs )} >Log coverSongs</button>
           <SectionCards title="Official Music Videos" videos={officialMusicVideos} size="large" />
           <SectionCards title="Live Performances" videos={livePerformances} size="small" />
           <SectionCards title="Cover Songs" videos={coverSongs} size="small" />
