@@ -115,6 +115,7 @@ const Video = ({ video }) => {
           height="360"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=0&origin=http://example.com&controls=0&rel=1`}
           frameBorder="0"
+          style={{ marginTop: '60px'}}
         ></iframe>
 
         <div className={styles.likeDislikeBtnWrapper}>

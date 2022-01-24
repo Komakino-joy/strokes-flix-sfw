@@ -9,13 +9,13 @@
   color: var(--white10);
   font-weight: 700;
   font-size: 2rem;
+  margin-top: 50px;
 }
 
 .cardWrapper {
   display: flex;
-  padding-top: 1.7rem;
   padding-bottom: 1.5rem;
-  margin-top: 1.5rem /* 24px */;
+  margin-top: 1rem;
   margin-right: 0.75rem /* 12px */;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -41,5 +41,15 @@
   .container {
     padding-left: 4rem /* 64px */;
     padding-right: 4rem /* 64px */;
+  }
+
+  .cardWrapper::-webkit-scrollbar {
+    height: 8px;
+    border: 1px solid #1a1a1a;
+  }
+
+  .cardWrapper::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #242424;
   }
 }

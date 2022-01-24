@@ -1,7 +1,7 @@
 .container {
   min-height: 100vh;
   background-color: var(--black);
-  background-image: url(/static/fioe.svg);
+  background-image: url(/static/fioe-mobile.svg);
 }
 
 .header {
@@ -34,32 +34,26 @@
 }
 
 .main {
-  width: 82vw;
-  height: 80vh;
-  position: absolute;
-  display: flex;
-  top: 20%;
-  left: 18%;
   z-index: 10;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 .mainWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  padding-bottom: 6rem;
-  padding-top: 2rem /* 32px */;
-  background-color: var(--black20);
+  padding: 3rem 5rem;
 
-  height: 38%;
-  padding-left: 5rem /* 48px */;
-  padding-right: 5rem /* 48px */;
+  height: fit-content;
 
   border-radius: 0.375rem /* 6px */;
-  width: 30vw;
+  width: 80%;
   min-width: 350px;
-  min-height: 280px;
+
   background-color: rgba(53, 53, 53, 0.945);
 }
 
@@ -112,6 +106,12 @@
 }
 
 @media (min-width: 768px) {
+  .container {
+    min-height: 100vh;
+    background-color: var(--black);
+    background-image: url(/static/fioe.svg);
+  }
+
   .headerWrapper {
     padding-left: 4rem /* 64px */;
     padding-right: 4rem /* 64px */;
@@ -125,5 +125,11 @@
 
   .mainWrapper {
     margin-top: 2rem /* 128px */;
+  }
+
+  .main {
+    margin-left: 25%;
+    transform: unset;
+    width: 30vw;
   }
 }

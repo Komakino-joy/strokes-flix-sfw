@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "../../hooks/hooks";
 import styles from "./navbar.module.css";
 
 import { useRouter } from "next/router";
-import Link from "next/link";
 import Image from "next/image";
 
 import { magic } from "../../lib/magic-client";
@@ -12,6 +12,8 @@ const NavBar = () => {
   const [username, setUsername] = useState("");
   const [didToken, setDidToken] = useState("");
   const router = useRouter();
+
+  const isBreakpoint = useMediaQuery(1024);
 
   useEffect(async () => {
     try {
@@ -68,8 +70,10 @@ const NavBar = () => {
             <Image
               src="/static/strokesflix.png"
               alt="StrokesFlix logo"
-              width="150px"
-              height="110px"
+              // width="150px"
+              width={!isBreakpoint ? "150px" : "100px"}
+              height={!isBreakpoint ? "110px" : "70px"}
+              // height="110px"
             />
           </div>
         </a>

@@ -34,7 +34,7 @@ const MyList = ({ myListVideos }) => {
       </Head>
       <main className={styles.main}>
         <NavBar />
-        <div className={styles.sectionWrapper} style={{ marginTop: '8%'}}>
+        <div className={styles.sectionWrapper} style={{ marginTop: '150px'}}>
           <SectionCards
             title="My List"
             videos={myListVideos}

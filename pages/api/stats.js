@@ -3,6 +3,7 @@ import {
   updateStats,
   insertStats,
 } from "../../lib/db/hasura";
+
 import { verifyToken } from "../../lib/utils";
 
 export default async function stats(req, resp) {

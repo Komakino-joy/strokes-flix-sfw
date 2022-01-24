@@ -25,10 +25,11 @@
 
 .lgItem {
   position: relative;
-  width: 218px;
-  min-width: 218px;
+  width: 250px;
+  min-width: 250px;
   height: 434px;
   min-height: 434px;
+  margin-right: 5px;
 }
 .container {
   margin-right: 0.25rem /* 4px */;

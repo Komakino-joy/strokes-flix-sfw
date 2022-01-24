@@ -18,6 +18,7 @@ const SectionCards = (props) => {
                   imgUrl={video.imgUrl}
                   size={size}
                   shouldScale={shouldScale}
+                  title={video.title}
                 />
               </a>
             </Link>
