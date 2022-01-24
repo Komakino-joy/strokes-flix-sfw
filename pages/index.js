@@ -23,6 +23,7 @@ export async function getServerSideProps(context) {
       },
     };
   }
+  
   const watchItAgainVideos = await getWatchItAgainVideos(userId, token);
   const officialMusicVideos = await getVideos("the strokes official music video");
   const livePerformances = await getVideos("the strokes band live");
